@@ -1,4 +1,5 @@
 import articles from './_articles'
+import { formatDate } from '../../libs/datetime'
 
 /**
  * Blog articles lookup map
@@ -6,7 +7,10 @@ import articles from './_articles'
  */
 const articlesLookup = new Map()
 articles.forEach((article) => {
-	articlesLookup.set(article.slug, JSON.stringify(article))
+	articlesLookup.set(article.slug, JSON.stringify({
+		...article,
+		createdDate: formatDate(new Date(article.createdAt)),
+	}))
 })
 
 /**
