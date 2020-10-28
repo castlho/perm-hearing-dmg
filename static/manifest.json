@@ -1,8 +1,8 @@
 {
-	"background_color": "#FDFEFF",
-	"display": "minimal-ui",
-	"name": "Permanent Hearing Damage",
-	"short_name": "Perm Hearing Dmg",
-	"start_url": "/",
-	"theme_color": "#00338C"
+  "background_color": "#FDFEFF",
+  "display": "minimal-ui",
+  "name": "Permanent Hearing Damage",
+  "short_name": "Perm Hearing Dmg",
+  "start_url": "/",
+  "theme_color": "#00338C"
 }

@@ -7,28 +7,28 @@ import { formatDate } from '../../libs/datetime'
  */
 const articlesLookup = new Map()
 articles.forEach((article) => {
-	articlesLookup.set(article.slug, JSON.stringify({
-		...article,
-		createdDate: formatDate(new Date(article.createdAt)),
-	}))
+  articlesLookup.set(article.slug, JSON.stringify({
+    ...article,
+    createdDate: formatDate(new Date(article.createdAt)),
+  }))
 })
 
 /**
  * Blog article endpoint GET handler
  */
 export function get (req, res) {
-	const { slug } = req.params
-	const headers = {
-		'Content-Type': 'application/json',
-	}
+  const { slug } = req.params
+  const headers = {
+    'Content-Type': 'application/json',
+  }
 
-	if (articlesLookup.has(slug)) {
-		res.writeHead(200, headers)
-		res.end(articlesLookup.get(slug))
-	} else {
-		res.writeHead(404, headers)
-		res.end(JSON.stringify({
-			message: 'Not found',
-		}))
-	}
+  if (articlesLookup.has(slug)) {
+    res.writeHead(200, headers)
+    res.end(articlesLookup.get(slug))
+  } else {
+    res.writeHead(404, headers)
+    res.end(JSON.stringify({
+      message: 'Not found',
+    }))
+  }
 }

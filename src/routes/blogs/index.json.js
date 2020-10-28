@@ -7,17 +7,17 @@ import { formatDate } from '../../libs/datetime'
  * @type {string}
  */
 const articleSummaries = JSON.stringify(articles
-	.map(article => ({
-		..._pick(article, [ 'description', 'slug', 'title' ]),
-		createdDate: formatDate(new Date(article.createdAt)),
-	})))
+  .map(article => ({
+    ..._pick(article, [ 'description', 'slug', 'title' ]),
+    createdDate: formatDate(new Date(article.createdAt)),
+  })))
 
 /**
  * Blog article summaries GET handler
  */
 export function get (req, res) {
-	res.writeHead(200, {
-		'Content-Type': 'application/json',
-	})
-	res.end(articleSummaries)
+  res.writeHead(200, {
+    'Content-Type': 'application/json',
+  })
+  res.end(articleSummaries)
 }
