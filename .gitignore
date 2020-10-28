@@ -11,6 +11,7 @@ yarn-error.log
 
 # Firebase
 .firebaserc
+firebase-debug.log
 /.firebase/
 
 # WebStorm
