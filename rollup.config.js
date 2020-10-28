@@ -1,6 +1,8 @@
 import babel from '@rollup/plugin-babel'
 import commonjs from '@rollup/plugin-commonjs'
 import config from 'sapper/config/rollup.js'
+import glob from 'rollup-plugin-glob'
+import markdown from '@jackfranklin/rollup-plugin-markdown'
 import path from 'path'
 import pkg from './package.json'
 import replace from '@rollup/plugin-replace'
@@ -33,6 +35,8 @@ export default {
         emitCss: true,
         hydratable: true,
       }),
+      markdown(),
+      glob(),
       url({
         publicPath: '/client/',
         sourceDir: path.resolve(__dirname, 'src/node_modules/images'),
@@ -80,12 +84,16 @@ export default {
         generate: 'ssr',
         hydratable: true,
       }),
+      markdown(),
+      glob(),
       url({
         emitFiles: false, // already emitted by client build
         publicPath: '/client/',
         sourceDir: path.resolve(__dirname, 'src/node_modules/images'),
       }),
-      resolve({ dedupe: [ 'svelte' ] }),
+      resolve({
+        dedupe: [ 'svelte' ],
+      }),
       commonjs(),
     ],
     preserveEntrySignatures: 'strict',
