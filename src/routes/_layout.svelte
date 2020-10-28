@@ -1,6 +1,7 @@
 <script>
 	import Footer from '../components/Footer.svelte'
 	import Nav from '../components/Nav.svelte'
+	import { siteTitle } from '../libs/metadata'
 
 	export let segment
 </script>
@@ -32,8 +33,12 @@
 	}
 </style>
 
+<svelte:head>
+	<title>{siteTitle}</title>
+</svelte:head>
+
 <div class="app">
-	{#if !!segment}
+	{#if segment}
 		<Nav {segment} />
 	{/if}
 	<main>
