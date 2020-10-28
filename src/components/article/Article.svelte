@@ -47,5 +47,5 @@
   <ArticleCover createdDate="{article.createdDate}"
                 description="{article.description}"
                 title="{article.title}" />
-  <ArticleContent body="{article.body}" />
+  <ArticleContent html="{article.html}" />
 </article>

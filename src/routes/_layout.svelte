@@ -39,7 +39,7 @@
 
 <div class="app">
   {#if segment}
-    <Nav {segment} />
+    <Nav />
   {/if}
   <main>
     <slot />

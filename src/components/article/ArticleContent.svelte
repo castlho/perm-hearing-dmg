@@ -3,7 +3,7 @@
    * Article body content HTML
    * @type {*}
    */
-  export let body
+  export let html
 </script>
 
 <style>
@@ -46,5 +46,5 @@
 </style>
 
 <section class="artl-cont">
-  {@html body}
+  {@html html}
 </section>
