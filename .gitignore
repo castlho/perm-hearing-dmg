@@ -1,0 +1,17 @@
+# macOS
+.DS_Store
+
+# Yarn
+yarn-error.log
+
+# Node modules
+/node_modules/
+/src/node_modules/@sapper/
+/__sapper__/
+
+# Firebase
+.firebaserc
+/.firebase/
+
+# WebStorm
+/.idea/
