@@ -29,8 +29,13 @@
 
   .article-cvr__img {
     position: relative;
+  }
+  .article-cvr__img:before {
+    content: '';
+    display: block;
+    width: 100%;
     padding-top: 52.33333%;
-    overflow: hidden;
+    pointer-events: none;
   }
   .article-cvr__img img {
     position: absolute;
@@ -48,15 +53,19 @@
 
   @media (max-width: 767px) {
     .article-cvr {
-      padding: 1.25rem 1.5rem 1rem;
+      padding: 1rem 1.5rem;
     }
     .article-cvr:after {
       transform: var(--skew-mobile);
     }
 
     .article-cvr__img {
+      width: calc(100% + 3rem);
+      margin-left: -1.5rem;
+      margin-right: -1.5rem;
       margin-bottom: 1.25rem;
     }
+
     hr {
       margin-top: .75rem;
       margin-bottom: .75rem;
@@ -68,15 +77,19 @@
 
   @media (min-width: 768px) {
     .article-cvr {
-      padding: 2rem 2rem 1.5rem;
+      padding: 1.5rem 2rem;
     }
     .article-cvr:after {
       transform: var(--skew-desktop);
     }
 
     .article-cvr__img {
+      width: calc(100% + 4rem);
+      margin-left: -2rem;
+      margin-right: -2rem;
       margin-bottom: 1.75rem;
     }
+
     hr {
       margin-top: 1.25rem;
       margin-bottom: 1.25rem;
@@ -90,7 +103,8 @@
 <section class="article-cvr">
   {#if coverImage}
     <figure class="article-cvr__img">
-      <img alt="{title}" src="{coverImage}"
+      <img width="1200" height="628"
+           alt="{title}" src="{coverImage}"
            title="{title}" />
     </figure>
   {/if}

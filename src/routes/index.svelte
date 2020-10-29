@@ -44,12 +44,12 @@
       padding: 2rem 1.5rem;
     }
     h3 {
-      margin-bottom: .5rem;
+      margin-bottom: .75rem;
       padding-left: 1.5rem;
       padding-right: 1.5rem;
     }
     li:not(:last-child) {
-      margin-bottom: 1.25rem;
+      margin-bottom: 1rem;
     }
   }
 
@@ -58,12 +58,12 @@
       padding: 2.5rem 2rem;
     }
     h3 {
-      margin-bottom: .75rem;
+      margin-bottom: 1rem;
       padding-left: 2rem;
       padding-right: 2rem;
     }
     li:not(:last-child) {
-      margin-bottom: 1.75rem;
+      margin-bottom: 1.25rem;
     }
   }
 </style>
@@ -71,9 +71,10 @@
 <h1>{siteTitle}</h1>
 <h3>最新偉論</h3>
 <ul class="artl__items">
-  {#each articles as { byline, slug, title }}
+  {#each articles as { byline, coverImage, slug, title }}
     <li class="artl__item">
-      <ArticleCard {byline} {slug} {title} />
+      <ArticleCard {byline} {coverImage}
+                   {slug} {title} />
     </li>
   {/each}
 </ul>
