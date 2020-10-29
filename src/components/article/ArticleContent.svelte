@@ -10,8 +10,12 @@
   .article-cont :global(iframe) {
     display: block;
     max-width: 100%;
-    margin-left: auto;
-    margin-right: auto;
+    margin-left: auto !important;
+    margin-right: auto !important;
+  }
+  .article-cont :global(.article-embed.article-embed--ig iframe) {
+    width: 100%;
+    max-width: 500px;
   }
 
   @media (max-width: 767px) {
