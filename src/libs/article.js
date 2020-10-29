@@ -1,3 +1,4 @@
+import _pick from 'lodash/pick'
 import { formatDate } from './datetime'
 
 /**
@@ -15,11 +16,14 @@ export function isArticleValid (article) {
 export function formatArticleData
   ({ html = '', filename = '', metadata = {} } = {}) {
   return {
-    createdAt: metadata.createdAt || '',
+    ..._pick(metadata, [
+      'coverImage',
+      'createdAt',
+      'description',
+      'title',
+    ]),
     createdDate: formatDate(new Date(metadata.createdAt)),
-    description: metadata.description || '',
     html,
     slug: filename.replace(/\.md/g, ''),
-    title: metadata.title,
   }
 }

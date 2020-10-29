@@ -20,15 +20,6 @@
   $: metaTitle = article.title ? `${article.title} | ${siteTitle}` : ''
 </script>
 
-<style>
-  @media (max-width: 767px) {
-    .artl :global(.artl-covr) {
-      margin-left: .5rem;
-      margin-right: .5rem;
-    }
-  }
-</style>
-
 <svelte:head>
   {#if metaTitle}
     <title>{metaTitle}</title>
@@ -43,8 +34,9 @@
   {/if}
 </svelte:head>
 
-<article class="artl">
-  <ArticleCover createdDate="{article.createdDate}"
+<article class="article">
+  <ArticleCover coverImage="{article.coverImage}"
+                createdDate="{article.createdDate}"
                 description="{article.description}"
                 title="{article.title}" />
   <ArticleContent html="{article.html}" />

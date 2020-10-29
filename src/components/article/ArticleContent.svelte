@@ -7,7 +7,7 @@
 </script>
 
 <style>
-  .artl-cont :global(iframe) {
+  .article-cont :global(iframe) {
     display: block;
     max-width: 100%;
     margin-left: auto;
@@ -15,36 +15,34 @@
   }
 
   @media (max-width: 767px) {
-    .artl-cont {
+    .article-cont {
       padding-left: 1.5rem;
       padding-right: 1.5rem;
     }
-    .artl-cont :global(p) {
+    .article-cont :global(p) {
       margin-top: 1.5rem;
     }
-    .artl-cont :global(iframe) {
-      margin-top: 2rem;
-      margin-bottom: 2rem;
-      border-radius: .5rem;
+    .article-cont :global(iframe) {
+      margin-top: 2rem !important;
+      margin-bottom: 2rem !important;
     }
   }
 
   @media (min-width: 768px) {
-    .artl-cont {
+    .article-cont {
       padding-left: 2rem;
       padding-right: 2rem;
     }
-    .artl-cont :global(p) {
+    .article-cont :global(p) {
       margin-top: 2rem;
     }
-    .artl-cont :global(iframe) {
-      margin-top: 2.5rem;
-      margin-bottom: 2.5rem;
-      border-radius: .75rem;
+    .article-cont :global(iframe) {
+      margin-top: 2.5rem !important;
+      margin-bottom: 2.5rem !important;
     }
   }
 </style>
 
-<section class="artl-cont">
+<section class="article-cont">
   {@html html}
 </section>
