@@ -1,12 +1,9 @@
 <script>
+  /** Article byline */
+  export let byline = ''
+
   /** Article cover image */
   export let coverImage = ''
-
-  /** Article created date */
-  export let createdDate = ''
-
-  /** Article description */
-  export let description = ''
 
   /** Article title */
   export let title = ''
@@ -98,11 +95,10 @@
     </figure>
   {/if}
   <h1>{title}</h1>
-  {#if createdDate}
-    <p class="artl-covr__byline">{createdDate}</p>
-  {/if}
-  {#if description}
-    <hr />
-    <p class="artl-covr__desc">{description}</p>
+  {#if byline}
+    {#if !coverImage}
+      <hr />
+    {/if}
+    <p class="article-cvr__byline">{byline}</p>
   {/if}
 </section>

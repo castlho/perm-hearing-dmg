@@ -11,10 +11,25 @@ export function isArticleValid (article) {
 }
 
 /**
+ * Format article byline
+ * @param {string} createdDate
+ * @param {string} description
+ * @returns {string}
+ */
+export function formatArticleByline (createdDate = '', description = '') {
+  let byline = createdDate
+  if (description) {
+    byline += `${byline && description ? ' // ' : ''}${description}`
+  }
+  return byline
+}
+
+/**
  * Format article data
  */
 export function formatArticleData
   ({ html = '', filename = '', metadata = {} } = {}) {
+  const createdDate = formatDate(new Date(metadata.createdAt))
   return {
     ..._pick(metadata, [
       'coverImage',
@@ -22,7 +37,8 @@ export function formatArticleData
       'description',
       'title',
     ]),
-    createdDate: formatDate(new Date(metadata.createdAt)),
+    byline: formatArticleByline(createdDate, metadata.description),
+    createdDate,
     html,
     slug: filename.replace(/\.md/g, ''),
   }

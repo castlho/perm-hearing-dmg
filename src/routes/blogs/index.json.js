@@ -7,9 +7,9 @@ import articles from './_articles'
  */
 const articleSummaries = JSON.stringify(articles
   .map(article => _pick(article, [
+    'byline',
     'coverImage',
     'createdDate',
-    'description',
     'slug',
     'title',
   ])))

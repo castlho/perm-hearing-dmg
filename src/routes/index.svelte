@@ -75,9 +75,9 @@
 <h1>{siteTitle}</h1>
 <h3>最新偉論</h3>
 <ul class="artl__items">
-  {#each articles as article}
+  {#each articles as { byline, slug, title }}
     <li class="artl__item">
-      <ArticleCard {article} />
+      <ArticleCard {byline} {slug} {title} />
     </li>
   {/each}
 </ul>

@@ -35,9 +35,8 @@
 </svelte:head>
 
 <article class="article">
-  <ArticleCover coverImage="{article.coverImage}"
-                createdDate="{article.createdDate}"
-                description="{article.description}"
+  <ArticleCover byline="{article.byline}"
+                coverImage="{article.coverImage}"
                 title="{article.title}" />
   <ArticleContent html="{article.html}" />
 </article>
