@@ -1,9 +1,6 @@
 <script>
-  /**
-   * Article body content HTML
-   * @type {*}
-   */
-  export let html
+  /** Article body content HTML */
+  export let html = ''
 </script>
 
 <style>

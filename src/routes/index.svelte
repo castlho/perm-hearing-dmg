@@ -29,7 +29,7 @@
   h1 {
     font-style: italic;
     line-height: 1.25;
-    color: #00338C;
+    color: var(--navy);
   }
   ul {
     list-style-type: none;

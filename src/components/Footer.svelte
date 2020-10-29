@@ -19,7 +19,7 @@
     bottom: 0;
     left: 0;
     right: 0;
-    background-color: #D5D9DA;
+    background-color: var(--grey);
     z-index: -1;
   }
 

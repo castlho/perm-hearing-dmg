@@ -13,10 +13,8 @@
    * @type {string}
    */
   $: metaDescription = article.description || ''
-  /**
-   * Article title
-   * @type {string}
-   */
+
+  /** Article title */
   $: metaTitle = article.title ? `${article.title} | ${siteTitle}` : ''
 </script>
 

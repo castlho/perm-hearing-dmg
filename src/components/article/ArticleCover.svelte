@@ -14,7 +14,7 @@
     position: relative;
     margin-left: auto;
     margin-right: auto;
-    color: #00338C;
+    color: var(--navy);
   }
   .article-cvr:after {
     content: '';
@@ -23,7 +23,7 @@
     bottom: 0;
     left: 0;
     right: 0;
-    background-color: #D3F0FF;
+    background-color: var(--blue);
     z-index: -1;
   }
 

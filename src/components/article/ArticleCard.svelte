@@ -17,7 +17,7 @@
     display: block;
     position: relative;
     text-decoration: none;
-    color: #00338C;
+    color: var(--navy);
   }
   .article-crd:after {
     content: '';
@@ -26,7 +26,7 @@
     bottom: 0;
     left: 0;
     right: 0;
-    background-color: #D3F0FF;
+    background-color: var(--blue);
     z-index: -1;
   }
   .article-crd__byline {
