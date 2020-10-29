@@ -25,19 +25,19 @@
 
   @media (max-width: 767px) {
     .ftr {
-      padding: 1rem 1.5rem;
+      padding: 1.5rem 1.5rem 2rem;
     }
     .ftr:after {
-      transform: var(--skew-mobile);
+      //transform: var(--skew-mobile);
     }
   }
 
   @media (min-width: 768px) {
     .ftr {
-      padding: 1.5rem 2rem;
+      padding: 2rem 2rem 3rem;
     }
     .ftr:after {
-      transform: var(--skew-desktop);
+      //transform: var(--skew-desktop);
     }
   }
 </style>
