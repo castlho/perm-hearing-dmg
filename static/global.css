@@ -1,3 +1,8 @@
+:root {
+  --skew-mobile: skewY(-2deg);
+  --skew-desktop: skewY(-1.5deg);
+}
+
 html {
   font-size: 16px;
   font-family: "Nunito", "Noto Sans HK", Roboto, -apple-system, BlinkMacSystemFont, Segoe UI, Oxygen, Ubuntu, Helvetica Neue, sans-serif;

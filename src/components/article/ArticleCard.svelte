@@ -28,7 +28,6 @@
     right: 0;
     background-color: #D3F0FF;
     z-index: -1;
-    transition: transform .3s ease;
   }
   .article-crd__byline {
     font-style: italic;
@@ -36,19 +35,14 @@
 
   @media (max-width: 767px) {
     .article-crd {
-      padding: 1rem;
+      padding: 1rem 1.5rem;
     }
     .article-crd:after {
-      border-radius: .5rem;
-      transform: skew(-2.75deg, 1deg);
+      transform: var(--skew-mobile);
     }
     .article-crd__byline {
       margin-top: .25rem;
       font-size: 1rem;
-    }
-
-    .article-crd:active:after {
-      transform: scale(1.02) skew(2deg, -1deg);
     }
   }
 
@@ -57,16 +51,11 @@
       padding: 1.5rem 2rem;
     }
     .article-crd:after {
-      border-radius: .75rem;
-      transform: skew(-3deg, 1.25deg);
+      transform: var(--skew-desktop);
     }
     .article-crd__byline {
       margin-top: .5rem;
       font-size: 1.125rem;
-    }
-
-    .article-crd:hover:after {
-      transform: scale(1.02) skew(2deg, -1deg);
     }
   }
 </style>

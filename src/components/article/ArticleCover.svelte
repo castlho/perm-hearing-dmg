@@ -48,10 +48,10 @@
 
   @media (max-width: 767px) {
     .article-cvr {
-      padding: 1.25rem 1rem 1rem;
+      padding: 1.25rem 1.5rem 1rem;
     }
     .article-cvr:after {
-      transform: skewY(-2deg);
+      transform: var(--skew-mobile);
     }
 
     .article-cvr__img {
@@ -71,7 +71,7 @@
       padding: 2rem 2rem 1.5rem;
     }
     .article-cvr:after {
-      transform: skewY(-1.5deg);
+      transform: var(--skew-desktop);
     }
 
     .article-cvr__img {

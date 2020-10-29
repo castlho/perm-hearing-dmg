@@ -25,11 +25,10 @@
 
   @media (max-width: 767px) {
     .ftr {
-      padding: 1rem;
+      padding: 1rem 1.5rem;
     }
     .ftr:after {
-      border-radius: .5rem;
-      transform: skew(-1.5deg, 1deg);
+      transform: var(--skew-mobile);
     }
   }
 
@@ -38,8 +37,7 @@
       padding: 1.5rem 2rem;
     }
     .ftr:after {
-      border-radius: .75rem;
-      transform: skew(-2deg, 1deg);
+      transform: var(--skew-desktop);
     }
   }
 </style>

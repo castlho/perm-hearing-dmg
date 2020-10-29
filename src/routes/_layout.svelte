@@ -18,7 +18,8 @@
       max-width: 500px;
     }
     .app :global(.ftr) {
-      margin: 3.5rem .5rem 2rem;
+      margin-top: 3.5rem;
+      margin-bottom: 2rem;
     }
   }
 
