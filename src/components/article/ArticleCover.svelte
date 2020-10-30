@@ -19,6 +19,7 @@
   .article-cvr:after {
     content: '';
     position: absolute;
+    bottom: 0;
     background-color: var(--navy);
     z-index: -1;
   }
@@ -28,12 +29,10 @@
 
   @media (max-width: 767px) {
     .article-cvr {
-      padding-left: 1.5rem;
-      padding-right: 1.5rem;
+      padding: 0 1.5rem 1.25rem;
     }
     .article-cvr:after {
       top: 1.5rem;
-      bottom: -1.25rem;
       left: .5rem;
       right: -.75rem;
     }
@@ -46,12 +45,10 @@
 
   @media (min-width: 768px) {
     .article-cvr {
-      padding-left: 2rem;
-      padding-right: 2rem;
+      padding: 0 2rem 1.5rem;
     }
     .article-cvr:after {
       top: 2.5rem;
-      bottom: -1.5rem;
       left: .75rem;
       right: -1.5rem;
     }
