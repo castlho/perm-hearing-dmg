@@ -1,4 +1,6 @@
 <script>
+  import CoverImage from '../CoverImage.svelte'
+
   /** Article byline */
   export let byline = ''
 
@@ -28,27 +30,6 @@
     background-color: var(--navy);
     z-index: -1;
   }
-
-  .article-crd__img {
-    position: relative;
-  }
-  .article-crd__img:before {
-    content: '';
-    display: block;
-    width: 100%;
-    padding-top: 52.33333%;
-    pointer-events: none;
-  }
-  .article-crd__img img {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    object-position: center;
-    object-fit: cover;
-  }
-
   .article-crd__byline {
     font-style: italic;
     text-overflow: ellipsis;
@@ -68,12 +49,11 @@
       right: -.75rem;
     }
 
-    .article-crd__img {
+    .article-crd :global(.cover-img) {
       width: calc(100% + 3.25rem);
       margin-left: -2.25rem;
       margin-bottom: 1rem;
     }
-
     .article-crd__byline {
       margin-top: .125rem;
       font-size: .875rem;
@@ -92,12 +72,11 @@
       right: -1rem;
     }
 
-    .article-crd__img {
+    .article-crd :global(.cover-img) {
       width: calc(100% + 4.25rem);
       margin-left: -3rem;
       margin-bottom: 1.25rem;
     }
-
     .article-crd__byline {
       margin-top: .25rem;
       font-size: 1rem;
@@ -108,11 +87,7 @@
 <a class="article-crd" rel="prefetch"
    href="blogs/{slugEncoded}" title="{title}">
   {#if coverImage}
-    <figure class="article-crd__img">
-      <img width="1200" height="628"
-           loading="lazy" alt="{title}"
-           src="{coverImage}" title="{title}" />
-    </figure>
+    <CoverImage alt="{title}" src="{coverImage}" />
   {/if}
   <h2>{title}</h2>
   {#if byline}

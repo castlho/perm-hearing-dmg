@@ -1,4 +1,6 @@
 <script>
+  import CoverImage from '../CoverImage.svelte'
+
   /** Article cover image */
   export let coverImage = ''
 
@@ -20,27 +22,6 @@
     background-color: var(--navy);
     z-index: -1;
   }
-
-  .article-cvr__img {
-    position: relative;
-  }
-  .article-cvr__img:before {
-    content: '';
-    display: block;
-    width: 100%;
-    padding-top: 52.33333%;
-    pointer-events: none;
-  }
-  .article-cvr__img img {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    object-position: center;
-    object-fit: cover;
-  }
-
   .article-cvr__byline {
     font-style: italic;
   }
@@ -56,8 +37,7 @@
       left: .5rem;
       right: -.75rem;
     }
-
-    .article-cvr__img {
+    .article-cvr :global(.cover-img) {
       width: calc(100% + 3.25rem);
       margin-left: -2.25rem;
       margin-bottom: 1.25rem;
@@ -75,8 +55,7 @@
       left: .75rem;
       right: -1.5rem;
     }
-
-    .article-cvr__img {
+    .article-cvr :global(.cover-img) {
       width: calc(100% + 4.75rem);
       margin-left: -3.5rem;
       margin-bottom: 1.5rem;
@@ -86,11 +65,7 @@
 
 <section class="article-cvr">
   {#if coverImage}
-    <figure class="article-cvr__img">
-      <img width="1200" height="628"
-           alt="{title}" src="{coverImage}"
-           title="{title}" />
-    </figure>
+    <CoverImage alt="{title}" src="{coverImage}" />
   {/if}
   <h1>{title}</h1>
   {#if createdDate}
