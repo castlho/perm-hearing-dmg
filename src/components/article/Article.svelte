@@ -18,6 +18,20 @@
   $: metaTitle = article.title ? `${article.title} | ${siteTitle}` : ''
 </script>
 
+<style>
+  @media (max-width: 767px) {
+    .article :global(.article-cont) {
+      margin-top: 2.75rem;
+    }
+  }
+
+  @media (min-width: 768px) {
+    .article :global(.article-cont) {
+      margin-top: 3.5rem;
+    }
+  }
+</style>
+
 <svelte:head>
   {#if metaTitle}
     <title>{metaTitle}</title>
@@ -33,8 +47,8 @@
 </svelte:head>
 
 <article class="article">
-  <ArticleCover byline="{article.byline}"
-                coverImage="{article.coverImage}"
+  <ArticleCover coverImage="{article.coverImage}"
+                createdDate="{article.createdDate}"
                 title="{article.title}" />
   <ArticleContent html="{article.html}" />
 </article>

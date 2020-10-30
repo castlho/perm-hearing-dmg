@@ -4,9 +4,6 @@
   --white: #FDFEFF;
   --navy: #00338C;
   --blue: #D3F0FF;
-
-  --skew-mobile: skewY(-2deg);
-  --skew-desktop: skewY(-1.5deg);
 }
 
 html {

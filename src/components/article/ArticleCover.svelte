@@ -1,9 +1,9 @@
 <script>
-  /** Article byline */
-  export let byline = ''
-
   /** Article cover image */
   export let coverImage = ''
+
+  /** Article created date */
+  export let createdDate = ''
 
   /** Article title */
   export let title = ''
@@ -12,18 +12,12 @@
 <style>
   .article-cvr {
     position: relative;
-    margin-left: auto;
-    margin-right: auto;
-    color: var(--navy);
+    color: var(--white);
   }
   .article-cvr:after {
     content: '';
     position: absolute;
-    top: 0;
-    bottom: 0;
-    left: 0;
-    right: 0;
-    background-color: var(--blue);
+    background-color: var(--navy);
     z-index: -1;
   }
 
@@ -53,49 +47,39 @@
 
   @media (max-width: 767px) {
     .article-cvr {
-      padding: 1rem 1.5rem;
+      padding-left: 1.5rem;
+      padding-right: 1.5rem;
     }
     .article-cvr:after {
-      transform: var(--skew-mobile);
+      top: 1.5rem;
+      bottom: -1.25rem;
+      left: .5rem;
+      right: -.75rem;
     }
 
     .article-cvr__img {
-      width: calc(100% + 3rem);
-      margin-left: -1.5rem;
-      margin-right: -1.5rem;
+      width: calc(100% + 3.25rem);
+      margin-left: -2.25rem;
       margin-bottom: 1.25rem;
-    }
-
-    hr {
-      margin-top: .75rem;
-      margin-bottom: .75rem;
-    }
-    .article-cvr__byline {
-      margin-top: .25rem;
     }
   }
 
   @media (min-width: 768px) {
     .article-cvr {
-      padding: 1.5rem 2rem;
+      padding-left: 2rem;
+      padding-right: 2rem;
     }
     .article-cvr:after {
-      transform: var(--skew-desktop);
+      top: 2.5rem;
+      bottom: -1.5rem;
+      left: .75rem;
+      right: -1.5rem;
     }
 
     .article-cvr__img {
-      width: calc(100% + 4rem);
-      margin-left: -2rem;
-      margin-right: -2rem;
-      margin-bottom: 1.75rem;
-    }
-
-    hr {
-      margin-top: 1.25rem;
-      margin-bottom: 1.25rem;
-    }
-    .article-cvr__byline {
-      margin-top: .5rem;
+      width: calc(100% + 4.75rem);
+      margin-left: -3.5rem;
+      margin-bottom: 1.5rem;
     }
   }
 </style>
@@ -109,10 +93,7 @@
     </figure>
   {/if}
   <h1>{title}</h1>
-  {#if byline}
-    {#if !coverImage}
-      <hr />
-    {/if}
-    <p class="article-cvr__byline">{byline}</p>
+  {#if createdDate}
+    <p class="article-cvr__byline">{createdDate}</p>
   {/if}
 </section>
