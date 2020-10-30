@@ -18,7 +18,7 @@
       max-width: 500px;
     }
     .app :global(.ftr) {
-      margin-top: 3rem;
+      margin-top: 4rem;
     }
   }
 
@@ -27,7 +27,7 @@
       max-width: 704px;
     }
     .app :global(.ftr) {
-      margin-top: 4rem;
+      margin-top: 5rem;
     }
   }
 </style>

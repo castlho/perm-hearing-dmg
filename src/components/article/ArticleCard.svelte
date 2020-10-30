@@ -20,16 +20,12 @@
     display: block;
     position: relative;
     text-decoration: none;
-    color: var(--navy);
+    color: var(--white);
   }
   .article-crd:after {
     content: '';
     position: absolute;
-    top: 1.5rem;
-    bottom: 0;
-    left: 0;
-    right: 0;
-    background-color: var(--blue);
+    background-color: var(--navy);
     z-index: -1;
   }
 
@@ -40,7 +36,7 @@
     content: '';
     display: block;
     width: 100%;
-    padding-top: 40%;
+    padding-top: 52.33333%;
     pointer-events: none;
   }
   .article-crd__img img {
@@ -55,47 +51,56 @@
 
   .article-crd__byline {
     font-style: italic;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    overflow: hidden;
   }
 
   @media (max-width: 767px) {
     .article-crd {
-      padding: 0 1.5rem 1rem;
+      padding-left: 1.5rem;
+      padding-right: 1.5rem;
     }
     .article-crd:after {
-      transform: var(--skew-mobile);
+      top: 1.5rem;
+      bottom: -.75rem;
+      left: .5rem;
+      right: -.75rem;
     }
 
     .article-crd__img {
-      width: calc(100% + 3rem);
-      margin-left: -1.5rem;
-      margin-right: -1.5rem;
+      width: calc(100% + 3.25rem);
+      margin-left: -2.25rem;
+      margin-bottom: .75rem;
+    }
+
+    .article-crd__byline {
+      margin-top: .125rem;
+      font-size: .875rem;
+    }
+  }
+
+  @media (min-width: 768px) {
+    .article-crd {
+      padding-left: 2rem;
+      padding-right: 2rem;
+    }
+    .article-crd:after {
+      top: 2rem;
+      bottom: -1rem;
+      left: .75rem;
+      right: -1rem;
+    }
+
+    .article-crd__img {
+      width: calc(100% + 4.25rem);
+      margin-left: -3rem;
       margin-bottom: 1rem;
     }
 
     .article-crd__byline {
       margin-top: .25rem;
       font-size: 1rem;
-    }
-  }
-
-  @media (min-width: 768px) {
-    .article-crd {
-      padding: 0 2rem 1.25rem;
-    }
-    .article-crd:after {
-      transform: var(--skew-desktop);
-    }
-
-    .article-crd__img {
-      width: calc(100% + 4rem);
-      margin-left: -2rem;
-      margin-right: -2rem;
-      margin-bottom: 1.25rem;
-    }
-
-    .article-crd__byline {
-      margin-top: .5rem;
-      font-size: 1.125rem;
     }
   }
 </style>
@@ -105,8 +110,8 @@
   {#if coverImage}
     <figure class="article-crd__img">
       <img width="1200" height="628"
-           alt="{title}" src="{coverImage}"
-           title="{title}" />
+           loading="lazy" alt="{title}"
+           src="{coverImage}" title="{title}" />
     </figure>
   {/if}
   <h2>{title}</h2>
