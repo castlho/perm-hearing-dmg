@@ -20,6 +20,9 @@
     .app :global(.ftr) {
       margin-top: 4rem;
     }
+    main {
+      min-height: calc(100vh - 9rem);
+    }
   }
 
   @media (min-width: 768px) {
@@ -28,6 +31,9 @@
     }
     .app :global(.ftr) {
       margin-top: 5rem;
+    }
+    main {
+      min-height: calc(100vh - 10rem);
     }
   }
 </style>
@@ -42,6 +48,6 @@
   {/if}
   <main>
     <slot />
-    <Footer />
   </main>
+  <Footer />
 </div>

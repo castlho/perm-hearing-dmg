@@ -63,7 +63,7 @@
     }
     .article-crd:after {
       top: 1.5rem;
-      bottom: -.75rem;
+      bottom: -1rem;
       left: .5rem;
       right: -.75rem;
     }
@@ -71,7 +71,7 @@
     .article-crd__img {
       width: calc(100% + 3.25rem);
       margin-left: -2.25rem;
-      margin-bottom: .75rem;
+      margin-bottom: 1rem;
     }
 
     .article-crd__byline {
@@ -87,7 +87,7 @@
     }
     .article-crd:after {
       top: 2rem;
-      bottom: -1rem;
+      bottom: -1.25rem;
       left: .75rem;
       right: -1rem;
     }
@@ -95,7 +95,7 @@
     .article-crd__img {
       width: calc(100% + 4.25rem);
       margin-left: -3rem;
-      margin-bottom: 1rem;
+      margin-bottom: 1.25rem;
     }
 
     .article-crd__byline {

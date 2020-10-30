@@ -10,34 +10,41 @@
 
 <style>
   .ftr {
-    position: relative;
-  }
-  .ftr:after {
-    content: '';
-    position: absolute;
-    top: 0;
-    bottom: 0;
-    left: 0;
-    right: 0;
+    width: 100vw;
+    margin-left: calc(50% - 50vw);
     background-color: var(--grey);
-    z-index: -1;
+  }
+
+  @media (max-width: 499px) {
+    .ftr {
+      padding-left: 1.5rem;
+      padding-right: 1.5rem;
+    }
+  }
+
+  @media (min-width: 500px) and (max-width: 767px) {
+    .ftr {
+      padding-left: calc(50vw - 250px + 1.5rem);
+      padding-right: calc(50vw - 250px + 1.5rem);
+    }
   }
 
   @media (max-width: 767px) {
     .ftr {
-      padding: 1.5rem 1.5rem 2rem;
+      padding-top: 1.25rem;
+      padding-bottom: 1.25rem;
     }
-    .ftr:after {
-      //transform: var(--skew-mobile);
+    .ftr p {
+      font-size: .875rem;
     }
   }
 
   @media (min-width: 768px) {
     .ftr {
-      padding: 2rem 2rem 3rem;
+      padding: 1.5rem calc(50vw - 352px + 2rem);
     }
-    .ftr:after {
-      //transform: var(--skew-desktop);
+    .ftr p {
+      font-size: 1rem;
     }
   }
 </style>
