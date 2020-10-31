@@ -1,7 +1,7 @@
 <script>
+  import { siteDescription, siteTitle } from '../libs/metadata'
   import Footer from '../components/Footer.svelte'
   import Nav from '../components/Nav.svelte'
-  import { siteTitle } from '../libs/metadata'
 
   export let segment
 </script>
@@ -40,6 +40,12 @@
 
 <svelte:head>
   <title>{siteTitle}</title>
+  <meta content="{siteTitle}" property="og:title" />
+  <meta content="{siteTitle}" name="twitter:title" />
+
+  <meta content="{siteDescription}" name="description" />
+  <meta content="{siteDescription}" property="og:description" />
+  <meta content="{siteDescription}" name="twitter:description" />
 </svelte:head>
 
 <div class="app">

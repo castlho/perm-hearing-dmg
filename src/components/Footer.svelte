@@ -1,5 +1,5 @@
 <script>
-  import { siteTitle } from '../libs/metadata'
+  import { siteDescription, siteTitle } from '../libs/metadata'
 
   /**
    * Current year
@@ -13,6 +13,10 @@
     width: 100vw;
     margin-left: calc(50% - 50vw);
     background-color: var(--grey);
+  }
+  .ftr hr {
+    border-top-width: 1px;
+    border-top-color: var(--black);
   }
 
   @media (max-width: 499px) {
@@ -37,6 +41,10 @@
     .ftr p {
       font-size: .875rem;
     }
+    .ftr hr {
+      margin-top: .75rem;
+      margin-bottom: .75rem;
+    }
   }
 
   @media (min-width: 768px) {
@@ -46,10 +54,16 @@
     .ftr p {
       font-size: 1rem;
     }
+    .ftr hr {
+      margin-top: 1rem;
+      margin-bottom: 1rem;
+    }
   }
 </style>
 
 <footer class="ftr">
+  <p>{siteDescription}</p>
+  <hr />
   <p>@ {year} {siteTitle}</p>
   <p>Developed with <a href="https://svelte.dev/"
                        rel="external"
