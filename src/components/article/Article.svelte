@@ -21,13 +21,13 @@
 <style>
   @media (max-width: 767px) {
     .article :global(.article-cont) {
-      margin-top: 2.75rem;
+      margin-top: 2rem;
     }
   }
 
   @media (min-width: 768px) {
     .article :global(.article-cont) {
-      margin-top: 3.5rem;
+      margin-top: 2.5rem;
     }
   }
 </style>

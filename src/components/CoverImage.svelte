@@ -6,7 +6,7 @@
   export let height = 628
 
   /** Image loading mode */
-  export let loading
+  export let loading = undefined
 
   /** Image source URL */
   export let src = ''
