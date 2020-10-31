@@ -63,10 +63,15 @@
     }
 
     .article-crd:active:after {
-      transform: translateX(-.5rem);
+      transform: translate(-.5rem, .25rem);
     }
     .article-crd:active :global(.cover-img) {
-      transform: translateX(.5rem);
+      transform: translate(.5rem, -.25rem);
+    }
+    .article-crd:active h2 {
+      text-decoration-line: underline;
+      text-decoration-style: double;
+      text-decoration-color: var(--white);
     }
   }
 
@@ -90,10 +95,15 @@
     }
 
     .article-crd:hover:after {
-      transform: translateX(-.75rem);
+      transform: translate(-.75rem, .25rem);
     }
     .article-crd:hover :global(.cover-img) {
-      transform: translateX(.75rem);
+      transform: translate(.75rem, -.25rem);
+    }
+    .article-crd:hover h2 {
+      text-decoration: underline;
+      text-decoration-style: double;
+      text-decoration-color: var(--white);
     }
   }
 </style>
@@ -101,7 +111,8 @@
 <a class="article-crd" rel="prefetch"
    href="blogs/{slugEncoded}" title="{title}">
   {#if coverImage}
-    <CoverImage alt="{title}" src="{coverImage}" />
+    <CoverImage loading="lazy" alt="{title}"
+                src="{coverImage}" />
   {/if}
   <h2>{title}</h2>
   {#if byline}

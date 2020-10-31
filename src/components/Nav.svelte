@@ -9,6 +9,7 @@
   }
   h2 {
     font-style: italic;
+    color: var(--navy);
   }
 
   @media (max-width: 767px) {
