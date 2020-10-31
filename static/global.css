@@ -1,9 +1,9 @@
 :root {
-  --black: #010F20;
-  --grey: #D5D9DA;
+  --black: #051A31;
+  --grey: #C6C9CF;
   --white: #FDFEFF;
-  --navy: #00338C;
-  --blue: #D3F0FF;
+  --navy: #0A3F9C;
+  --blue: #3FA2D6;
 }
 
 html {
@@ -33,7 +33,7 @@ h4, h5, h6 {
 }
 a {
   text-decoration: none;
-  color: var(--navy);
+  color: var(--blue);
 }
 a:focus {
   outline: none;
