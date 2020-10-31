@@ -15,6 +15,7 @@
   .article-cvr {
     position: relative;
     color: var(--white);
+    z-index: 0;
   }
   .article-cvr:after {
     content: '';

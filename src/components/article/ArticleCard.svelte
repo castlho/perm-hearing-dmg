@@ -23,6 +23,7 @@
     position: relative;
     text-decoration: none;
     color: var(--white);
+    z-index: 0;
   }
   .article-crd:after {
     content: '';

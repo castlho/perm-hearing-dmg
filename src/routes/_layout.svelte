@@ -9,31 +9,36 @@
 <style>
   .app {
     width: 100%;
-    margin-left: auto;
-    margin-right: auto;
+    background-color: var(--white);
+    z-index: -1;
+  }
+  .app :global(.ftr) {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    z-index: -10;
+  }
+
+  @media (min-width: 500px) and (max-width: 767px) {
+    .app {
+      padding-left: calc(50vw - 250px);
+      padding-right: calc(50vw - 250px);
+    }
   }
 
   @media (max-width: 767px) {
     .app {
-      max-width: 500px;
-    }
-    .app :global(.ftr) {
-      margin-top: 4rem;
-    }
-    main {
-      min-height: calc(100vh - 9rem);
+      margin-bottom: 149px;
+      padding-bottom: 4rem;
     }
   }
 
   @media (min-width: 768px) {
     .app {
-      max-width: 704px;
-    }
-    .app :global(.ftr) {
-      margin-top: 5rem;
-    }
-    main {
-      min-height: calc(100vh - 10rem);
+      margin-bottom: 153px;
+      padding-bottom: 5rem;
+      padding-left: calc(50vw - 352px);
+      padding-right: calc(50vw - 352px);
     }
   }
 </style>
