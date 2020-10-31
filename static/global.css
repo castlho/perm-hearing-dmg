@@ -22,6 +22,7 @@ html,
 body {
   width: 100%;
   overflow-x: hidden;
+  pointer-events: none;
 }
 
 h1, h2, h3 {

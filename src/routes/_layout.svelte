@@ -10,6 +10,7 @@
   .app {
     width: 100%;
     background-color: var(--white);
+    pointer-events: auto;
     z-index: -1;
   }
   .app :global(.ftr) {
