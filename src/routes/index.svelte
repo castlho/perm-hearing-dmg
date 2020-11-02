@@ -16,6 +16,7 @@
 
 <script>
   import ArticleCard from '../components/article/ArticleCard.svelte'
+  import { siteDescription } from '../libs/metadata'
 
   /**
    * List of articles
@@ -25,6 +26,9 @@
 </script>
 
 <style>
+  .home__intro {
+    color: var(--navy);
+  }
   ul {
     list-style-type: none;
     padding: 0;
@@ -34,6 +38,12 @@
   }
 
   @media (max-width: 767px) {
+    .home__intro {
+      margin-bottom: 1.5rem;
+      padding-left: 1.5rem;
+      padding-right: 1.5rem;
+      font-size: 1rem;
+    }
     h3 {
       margin-bottom: 1rem;
       padding-left: 1.5rem;
@@ -45,6 +55,12 @@
   }
 
   @media (min-width: 768px) {
+    .home__intro {
+      margin-bottom: 2rem;
+      padding-left: 2rem;
+      padding-right: 2rem;
+      font-size: 1.125rem;
+    }
     h3 {
       margin-bottom: 1.25rem;
       padding-left: 2rem;
@@ -56,6 +72,7 @@
   }
 </style>
 
+<p class="home__intro">{siteDescription}</p>
 <h3>最新偉論 //</h3>
 <ul class="artl__items">
   {#each articles as { byline, coverImage, slug, title }}

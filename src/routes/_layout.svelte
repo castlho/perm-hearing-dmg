@@ -1,7 +1,7 @@
 <script>
   import { siteDescription, siteTitle } from '../libs/metadata'
   import Footer from '../components/Footer.svelte'
-  import Header from '../components/Header.svelte'
+  import Header from '../components/header/Header.svelte'
   import intersection from '../actions/intersection'
   import scrollProgress from '../stores/scrollProgress'
 
@@ -46,6 +46,9 @@
       margin-bottom: 149px;
       padding-bottom: 4rem;
     }
+    .page :global(.hdr) {
+      margin-bottom: 1.5rem;
+    }
   }
 
   @media (min-width: 768px) {
@@ -54,6 +57,9 @@
       padding-bottom: 5rem;
       padding-left: calc(50vw - 352px);
       padding-right: calc(50vw - 352px);
+    }
+    .page :global(.hdr) {
+      margin-bottom: 2rem;
     }
   }
 </style>
@@ -74,7 +80,7 @@
         on:intersect-start="{onScrollTop}"
         class="trckr" />
   <!-- Page header -->
-  <Header showIntro="{!segment}" />
+  <Header showLink="{!!segment}" />
   <!-- Page content -->
   <main>
     <slot />
