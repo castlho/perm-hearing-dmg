@@ -45,9 +45,9 @@
     position: absolute;
     bottom: 0;
     left: 107.5%;
-    width: 30%;
-    height: 69%;
-    padding-bottom: 3%;
+    width: 40%;
+    height: 72%;
+    padding-bottom: 6%;
   }
   .hdr-masthead__prog {
     width: 100%;
