@@ -1,5 +1,5 @@
 /** Site description */
-export const siteDescription = '每次聽音樂，都是用聽力換經歷。十年過去，開始聽不清低頻聲音，卻得到回憶滿滿。'
+export const siteDescription = '每次聽音樂，都係用聽力嚟換經歷。過咗十年，低頻嘅聲開始聽唔清，卻得到滿滿嘅回憶。'
 
 /** Site title */
 export const siteTitle = 'Permanent Hearing Damage'
