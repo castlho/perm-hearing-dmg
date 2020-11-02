@@ -2,18 +2,32 @@
   import { siteDescription, siteTitle } from '../libs/metadata'
   import Footer from '../components/Footer.svelte'
   import Header from '../components/Header.svelte'
+  import intersection from '../actions/intersection'
+  import scrollProgress from '../stores/scrollProgress'
 
-  export let segment
+  /** Page segment */
+  export let segment = ''
+
+  /** Scroll top tracker option */
+  const scrollTopTrackerOption = {
+    rootMargin: '0px 0px -80% 0px',
+  }
+
+  /** Scroll top event listener */
+  const onScrollTop = () => {
+    // Set scroll progress to 0%
+    scrollProgress.set(0.0)
+  }
 </script>
 
 <style>
-  .app {
+  .page {
     width: 100%;
     background-color: var(--white);
     pointer-events: auto;
     z-index: -1;
   }
-  .app :global(.ftr) {
+  .page :global(.ftr) {
     position: fixed;
     bottom: 0;
     left: 0;
@@ -21,21 +35,21 @@
   }
 
   @media (min-width: 500px) and (max-width: 767px) {
-    .app {
+    .page {
       padding-left: calc(50vw - 250px);
       padding-right: calc(50vw - 250px);
     }
   }
 
   @media (max-width: 767px) {
-    .app {
+    .page {
       margin-bottom: 149px;
       padding-bottom: 4rem;
     }
   }
 
   @media (min-width: 768px) {
-    .app {
+    .page {
       margin-bottom: 153px;
       padding-bottom: 5rem;
       padding-left: calc(50vw - 352px);
@@ -54,10 +68,17 @@
   <meta content="{siteDescription}" name="twitter:description" />
 </svelte:head>
 
-<div class="app">
+<div class="page">
+  <!-- Scroll top tracker -->
+  <span use:intersection="{scrollTopTrackerOption}"
+        on:intersect-start="{onScrollTop}"
+        class="trckr" />
+  <!-- Page header -->
   <Header showIntro="{!segment}" />
+  <!-- Page content -->
   <main>
     <slot />
   </main>
+  <!-- Page footer -->
   <Footer />
 </div>
