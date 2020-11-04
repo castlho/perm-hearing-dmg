@@ -29,7 +29,7 @@
     }
     .hdr__title {
       min-height: 100px;
-      padding-left: calc(80px + 1rem);
+      padding-left: 80px;
       padding-right: 1.5rem;
     }
   }
@@ -44,7 +44,7 @@
     }
     .hdr__title {
       min-height: 125px;
-      padding-left: calc(100px + 1.25rem);
+      padding-left: calc(100px + .5rem);
       padding-right: 2rem;
     }
   }

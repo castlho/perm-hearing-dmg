@@ -28,7 +28,11 @@
     bottom: 0;
     left: 0;
     right: 0;
-    background-color: var(--navy);
+  }
+  .hdr-masthead__logo img {
+    width: 85%;
+    height: 85%;
+    margin-top: 7.5%;
   }
   .hdr-masthead__link {
     position: absolute;
@@ -86,19 +90,21 @@
       <a class="hdr-masthead__link" href="/"
          rel="prefetch" title="{siteTitle}">{siteTitle}</a>
     {/if}
+    <img width="319" height="400"
+         alt="{siteTitle}" src="/logo-md.png" />
   </div>
-  <div class="hdr-masthead__progs">
-    <div class="hdr-masthead__prog hdr-masthead__prog--2"
-         class:hdr-masthead__prog--show="{progress >= 0.56}">
-      <span />
-    </div>
-    <div class="hdr-masthead__prog hdr-masthead__prog--1"
-         class:hdr-masthead__prog--show="{progress >= 0.28}">
-      <span />
-    </div>
-    <div class="hdr-masthead__prog hdr-masthead__prog--3"
-         class:hdr-masthead__prog--show="{progress >= 0.84}">
-      <span />
-    </div>
-  </div>
+<!--  <div class="hdr-masthead__progs">-->
+<!--    <div class="hdr-masthead__prog hdr-masthead__prog&#45;&#45;2"-->
+<!--         class:hdr-masthead__prog&#45;&#45;show="{progress >= 0.56}">-->
+<!--      <span />-->
+<!--    </div>-->
+<!--    <div class="hdr-masthead__prog hdr-masthead__prog&#45;&#45;1"-->
+<!--         class:hdr-masthead__prog&#45;&#45;show="{progress >= 0.28}">-->
+<!--      <span />-->
+<!--    </div>-->
+<!--    <div class="hdr-masthead__prog hdr-masthead__prog&#45;&#45;3"-->
+<!--         class:hdr-masthead__prog&#45;&#45;show="{progress >= 0.84}">-->
+<!--      <span />-->
+<!--    </div>-->
+<!--  </div>-->
 </section>
